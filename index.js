@@ -8,9 +8,7 @@ const server = Hapi.server({
 server.route({
   method: 'GET',
   path: '/',
-  handler: function(request, h){
-    return 'Hello World from Hapi'
-  }
+  handler: (request, h) => 'Hello World from Hapi'
 });
 
 async function start() {
