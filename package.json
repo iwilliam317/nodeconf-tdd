@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "lab -r console --verbose --coverage"
+    "test": "lab -r console --verbose "
   },
   "keywords": [],
   "author": "",
