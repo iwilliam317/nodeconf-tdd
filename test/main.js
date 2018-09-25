@@ -9,5 +9,12 @@ lab.experiment('GET /', () => {
     assert.equal(res.statusCode, 200);
     assert.equal(res.result, 'Hello World from Hapi');
 
-  })
-})
+  });
+});
+
+lab.experiment('POST /', () => {
+  lab.test('should create a user', async () => {
+    let res = await server.inject({ url: '/user', method: 'POST', payload: { 'name': 'William' } });
+    assert.equal(res.statusCode, 200);
+  });
+});
