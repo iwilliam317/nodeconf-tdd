@@ -11,6 +11,11 @@ server.route({
   handler: (request, h) => 'Hello World from Hapi'
 });
 
+server.route({
+  method: 'POST',
+  path: '/user',
+  handler: (request, h) => 'Hello' })
+
 async function start() {
   try{
     await server.start();
